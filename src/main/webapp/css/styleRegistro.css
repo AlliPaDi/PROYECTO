@@ -1,0 +1,133 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    background-color: rgb(52, 107, 132);
+}
+
+.container {
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    width: 70%;
+    height: 90%;
+    background-color: #f8f8f8;
+    padding: 1em;
+    /* margin: 1em; */
+}
+
+.form {
+    padding: 1em 0;
+}
+
+
+
+form .field {
+    margin: 20px 20px;
+}
+
+.field label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.field label input{
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+
+}
+
+.field label i{
+    color: #919191
+}
+
+form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+
+.invalid input {
+    border-color: #d93025;
+}
+
+.input-field .show-hide {
+    position: absolute;
+    right: 13px;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.field .error {
+    display: flex;
+    margin-top: 6px;
+    color: #d93025;
+    font-size: 13px;
+    display: none;
+}
+
+.invalid .error {
+    display: flex;
+}
+
+.error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.create-password .error {
+    align-items: flex-start;
+}
+
+.error-icon {
+    margin-top: 4px;
+}
+
+.presionar{
+    background-color: rgb(52,107,132);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.presionar:hover{
+    background-color: #102129;
+}
+
+.container.overflow-auto::-webkit-scrollbar {
+    width: 5px;
+}
+.container.overflow-auto::-webkit-scrollbar-thumb {
+    background-color: rgb(134,134,134);
+    border-radius: 5px;
+}
