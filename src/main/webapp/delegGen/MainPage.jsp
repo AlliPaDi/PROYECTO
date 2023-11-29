@@ -22,12 +22,9 @@
         <!-- CABECERA DE LA BARRA LATERAL LISTOOOOO -->
         <div class="header-left">
             <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo"> <img
-                    src="assets/img/IconoBat.png" width="40" height="70" alt="logo"> <span
+                    src="assets/img/IconoBat.png" width="30" height="50" alt="logo"> <span
                     class="logoclass">TELEWEEK</span> </a>
-            <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo logo-small">
-                <img src="assets/img/IconoBat.png" alt="Logo" width="30" height="30"> </a>
         </div>
-        <!-- BAJARLE AL MURCIELAGO XD-->
         <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
         <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
         <!-- NAVBAR -->
@@ -51,7 +48,6 @@
                             <p class="text-muted mb-0">Delegado General</p>
                         </div>
                     </div>
-                    <!-- CHEQUEAR LAS REFERENCIAS Y VISTAS -->
                     <a class="dropdown-item" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
                         Perfil</a>
                     <a class="dropdown-item"

@@ -10,10 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/IconoBat.png">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/feathericon.min.css">
-    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -25,12 +22,9 @@
         <!-- CABECERA DE LA BARRA LATERAL LISTOOOOO -->
         <div class="header-left">
             <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo"> <img
-                    src="assets/img/IconoBat.png" width="40" height="70" alt="logo"> <span
+                    src="assets/img/IconoBat.png" width="30" height="50" alt="logo"> <span
                     class="logoclass">TELEWEEK</span> </a>
-            <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo logo-small">
-                <img src="assets/img/IconoBat.png" alt="Logo" width="30" height="30"> </a>
         </div>
-        <!-- BAJARLE AL MURCIELAGO XD-->
         <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
         <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
         <!-- NAVBAR -->
@@ -190,7 +184,6 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 
