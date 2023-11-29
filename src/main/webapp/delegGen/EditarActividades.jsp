@@ -174,8 +174,8 @@
 
                                         <!-- ELIMINAR ACT -->
                                         <td>
-                                            <button class="btn btn-danger" data-bs-toggle="modal"
-                                                    href="#eliminarActividad<%=i%>">
+                                            <button class="btn btn-danger" data-toggle="modal"
+                                                    data-target="#eliminarActividad">
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </td>
@@ -204,6 +204,20 @@
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%--     MODAL  ELIMINAR   --%>
+            <div id="eliminarActividad" class="modal fade delete-modal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <img src="assets/img/sent.png" alt="" width="50" height="46">
+                            <h3 class="delete_class">¿Estás seguro de que quieres eliminar la actividad?</h3>
+                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Cancelar</a>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
                             </div>
                         </div>
                     </div>
