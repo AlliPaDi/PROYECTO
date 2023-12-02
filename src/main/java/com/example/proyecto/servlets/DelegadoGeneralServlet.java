@@ -139,9 +139,6 @@ public class DelegadoGeneralServlet extends HttpServlet {
 
 
                 actividad.setTitulo(request.getParameter("tituloActividad"));
-                if(request.getParameter("estadoActividad")!=null){
-                    actividad.setEstado(request.getParameter("estadoActividad"));
-                }
                 actividad.setDescripcion(request.getParameter("descripcionActividad"));
                 if(request.getPart("fotoActividad")!=null){
                     actividad.setFoto(request.getPart("fotoActividad").getInputStream());

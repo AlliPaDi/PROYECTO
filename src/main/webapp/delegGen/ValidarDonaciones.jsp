@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/feathericon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -138,8 +140,8 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <!-- TABLA DE NUEVAS DONACIONES -->
-                                <table class="table table-hover mt-1 mb-1">
-                                    <thead>
+                                <table class="table table-hover">
+                                    <thead class="table-light">
                                     <tr>
                                         <th>#</th>
                                         <th>Usuario</th>
