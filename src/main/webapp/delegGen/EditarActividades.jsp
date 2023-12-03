@@ -65,7 +65,6 @@
                             <p class="text-muted mb-0">Delegado General</p>
                         </div>
                     </div>
-                    <!-- CHEQUEAR LAS REFERENCIAS Y VISTAS -->
                     <a class="dropdown-item text-decoration-none"
                        href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
                         Perfil</a>

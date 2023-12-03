@@ -58,7 +58,6 @@
                     </div>
                     <a class="dropdown-item text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
                         Perfil</a>
-                    <!-- revisar ruta -->
                     <a class="dropdown-item text-decoration-none"
                        href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=cerrar_sesion">Cerrar
                         Sesión</a>
@@ -142,7 +141,7 @@
             <div class="alert alert-danger" role="alert"><%=request.getParameter("err")%>
             </div>
             <% } %>
-            <!-- BUSCAR ACTIVIDAD IMPLEMENTAR EN EL SERVLET Y DAO -->
+            <!-- BUSCAR DONACION IMPLEMENTAR EN EL SERVLET Y DAO -->
             <form method="post" action="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=buscar">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Buscar por nombre" name="textoBuscar"

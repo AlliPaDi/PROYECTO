@@ -3,7 +3,7 @@
 <%@ page import="com.example.proyecto.beans.Alumno" %>
 <%@ page import="com.example.proyecto.beans.DelegadoGeneral" %>
 <jsp:useBean id="listaAlumnosPendientes" scope="request" type="ArrayList<com.example.proyecto.beans.Alumno>"/>
-
+<jsp:useBean id="textoBusqueda" scope="request" type="java.lang.String" class="java.lang.String"/>
 <html lang="en">
 
 <head>
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/feathericon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -24,19 +26,21 @@
     <div class="header">
         <!-- CABECERA DE LA BARRA LATERAL LISTOOOOO -->
         <div class="header-left">
-            <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo"> <img
+            <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo text-decoration-none"> <img
                     src="assets/img/IconoBat.png" width="30" height="50" alt="logo"> <span
-                    class="logoclass">TELEWEEK</span> </a>
+                    class="logoclass text-decoration-none">TELEWEEK</span> </a>
         </div>
         <!-- LAS RAYITAS Q ABREN A LA BARRA LISTOOO-->
-        <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
-        <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+        <a class="text-decoration-none" href="javascript:void(0);" id="toggle_btn"> <i
+                class="fe fe-text-align-left"></i> </a>
+        <a class="mobile_btn text-decoration-none" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
         <!-- NAVBAR -->
         <ul class="nav user-menu">
             <!-- FOTO DE PERFIL CON LAS OPCIONES DE EDITAR PERFIL Y DEMAS -->
             <li class="nav-item dropdown has-arrow">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
-                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50" alt="Soeng Souy"></span>
+                <a href="#" class="dropdown-toggle nav-link text-decoration-none" data-bs-toggle="dropdown"> <span
+                        class="user-img"><img
+                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50"></span>
                 </a>
                 <!-- MENU DESPLEGABLE DE LA FLECHITA DE LA FOTO DE PERFIL -->
                 <div class="dropdown-menu">
@@ -53,10 +57,10 @@
                             <p class="text-muted mb-0">Delegado General</p>
                         </div>
                     </div>
-                    <a class="dropdown-item" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
+                    <a class="dropdown-item text-decoration-none"
+                       href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
                         Perfil</a>
-                    <!-- revisar ruta -->
-                    <a class="dropdown-item"
+                    <a class="dropdown-item text-decoration-none"
                        href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=cerrar_sesion">Cerrar
                         Sesión</a>
                 </div>
@@ -70,47 +74,54 @@
         <div class="sidebar-inner slimscroll">
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
-                    <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page"><i
+                    <li><a class="text-decoration-none"
+                           href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page"><i
                             class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
                     </li>
                     <li class="list-divider"></li>
 
                     <li class="menu-title mt-3"><span>ACCIONES</span></li>
                     <!-- USUARIOS -->
-                    <li class="submenu"><a href="#"><i class="fas fa-user"></i> <span> Usuarios </span> <span
-                            class="menu-arrow"></span></a>
+                    <li class="submenu"><a class="text-decoration-none" href="#"><i class="fas fa-user"></i> <span> Usuarios </span>
+                        <span
+                                class="menu-arrow"></span></a>
                         <ul class="submenu_class" style="display: none;">
-                            <li><a class="active"
+                            <li><a class="active text-decoration-none"
                                    href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_registro">
                                 Solicitudes </a></li>
-                            <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_usuarios">
+                            <li><a class="text-decoration-none"
+                                   href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_usuarios">
                                 Registrados </a></li>
                         </ul>
                     </li>
 
                     <!-- DONACIONES -->
-                    <li class="submenu"><a href="#"><i class="bi bi-heart-fill"></i> <span> Donaciones </span>
+                    <li class="submenu"><a class="text-decoration-none" href="#"><i class="bi bi-heart-fill"></i> <span> Donaciones </span>
                         <span class="menu-arrow"></span></a>
                         <ul class="submenu_class" style="display: none;">
                             <li>
-                                <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Recepcionadas </a>
+                                <a class="text-decoration-none"
+                                   href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Recepcionadas </a>
                             </li>
-                            <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_donaciones">Verificadas</a>
+                            <li><a class="text-decoration-none"
+                                   href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_donaciones">Verificadas</a>
                             </li>
                         </ul>
                     </li>
 
                     <!-- ACTIVIDADES -->
-                    <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=editar_actividades"><i
+                    <li><a class="text-decoration-none"
+                           href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=editar_actividades"><i
                             class="bi bi-calendar-fill"></i><span>Actividades</span></a>
                     </li>
 
                     <!-- CONTACTOS -->
                     <li class="list-divider"></li>
                     <li class="menu-title mt-3"><span>CONTACTOS</span></li>
-                    <li><a href="https://www.instagram.com/aitel.pucp/" target="_blank">
+                    <li><a class="text-decoration-none" href="https://www.instagram.com/aitel.pucp/" target="_blank">
                         <i class="bi bi-instagram"></i> <span>Instagram</span></a></li>
-                    <li><a href="mailto:aitel@pucp.pe" target="_blank"><i class="fas fa-envelope"></i>
+                    <li><a class="text-decoration-none" href="mailto:aitel@pucp.pe" target="_blank"><i
+                            class="fas fa-envelope"></i>
                         <span>Gmail</span></a></li>
 
                 </ul>
@@ -130,6 +141,29 @@
                     </div>
                 </div>
             </div>
+            <!-- MENSAJES DE ERROR O CONFIRMACION -->
+            <% if (request.getParameter("msg") != null) {%>
+            <div class="alert alert-success" role="alert"><%=request.getParameter("msg")%>
+            </div>
+            <% } %>
+            <% if (request.getParameter("err") != null) {%>
+            <div class="alert alert-danger" role="alert"><%=request.getParameter("err")%>
+            </div>
+            <% } %>
+            <!-- BUSCAR ALUMNO IMPLEMENTAR EN EL SERVLET Y DAO -->
+            <form method="post" action="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=buscar">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Buscar por nombre" name="textoBuscar"
+                           value="<%=textoBusqueda%>"/>
+                    <button class="input-group-text" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <a class="input-group-text"
+                       href="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=validar_registro">
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </div>
+            </form>
             <!-- LISTA DE NUEVAS SOLICITUDES -->
             <div class="row">
                 <div class="col-sm-12">
@@ -152,43 +186,155 @@
 
                                     <tbody>
                                     <%int i = 1;%>
-                                    <%for (Alumno alumno: listaAlumnosPendientes){%>
+                                    <%for (Alumno alumno : listaAlumnosPendientes) {%>
                                     <tr>
-                                        <td><%=i%></td>
-                                        <td><%=alumno.getNombre()+" "+alumno.getApellido()%></td>
-                                        <td><%=alumno.getCorreo()%></td>
+                                        <td><%=i%>
+                                        </td>
+                                        <td><%=alumno.getNombre() + " " + alumno.getApellido()%>
+                                        </td>
+                                        <td><%=alumno.getCorreo()%>
+                                        </td>
                                         <!-- OBSERVAR INFO DEL ALUMNO QUE ENVÍA SOLICITUD-->
                                         <td>
-                                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalMostrar<%=i%>">
+                                            <button class="btn btn-secondary" data-bs-toggle="modal"
+                                                    data-bs-target="#modalMostrar<%=i%>">
                                                 <i class="bi bi-eye"></i>
                                             </button>
                                         </td>
+                                        <!-- MODAL OBSERVAR ALUMNO -->
+                                        <div class="modal fade" id="modalMostrar<%=i%>" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <form>
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title fw-bold" id="nuevoModalLabel">
+                                                                Alumno</h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="mb-3 d-flex justify-content-center align-items-center flex-column">
+                                                                <img src="images/usuario.jpg" alt="Imagen del usuario"
+                                                                     id="userImage"
+                                                                     class="img-thumbnail w-50">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <h6>Nombre:</h6>
+                                                                <p><%=alumno.getNombre() + " " + alumno.getApellido()%>
+                                                                </p>
+                                                            </div>
+                                                            <div class="row mb-3">
+                                                                <div class="col-6">
+                                                                    <h6 class="fw-bold">Estado:</h6>
+                                                                    <p class="form-control"><%=alumno.getEgresado()%>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="fw-bold">Código:</h6>
+                                                                    <p class="form-control"><%=alumno.getCodigo()%>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <h6 class="fw-bold">Correo:</h6>
+                                                                <p class="form-control"><%=alumno.getCorreo()%>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger"
+                                                                    data-bs-dismiss="modal">Cerrar
+                                                            </button>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FIN MODAL OBSERVAR ALUMNO -->
+
                                         <!-- ACEPTAR -->
                                         <td>
-                                            <button class="btn btn-primary" >
+                                            <button type="button" class="btn btn-primary"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#aceptar">
                                                 <i class="bi bi-person-check-fill"></i>
                                             </button>
                                         </td>
+                                        <!-- MODAL ACEPTAR ALUMNO -->
+                                        <div class="modal fade" id="aceptar" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Alumno aceptado
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-justify">
+                                                        Has seleccionado "aceptar al alumno". <br>
+                                                        Si esta es la acción que deseas realizar, por favor confirma tu elección,
+                                                        de lo contrario, selecciona cancelar.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light active"
+                                                                data-bs-dismiss="modal">Cancelar
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary">Aceptar alumno
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FIN MODAL ACEPTAR ALUMNO -->
+
                                         <!-- RECHAZAR -->
                                         <td>
-                                            <button class="btn btn-danger">
+                                            <button type="button" class="btn btn-danger"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#rechazar">
                                                 <i class="bi bi-person-x-fill"></i>
                                             </button>
                                         </td>
+                                        <!-- MODAL RECHAZAR ALUMNO -->
+                                        <div class="modal fade" id="rechazar" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Alumno no aceptado
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-justify">
+                                                        Has seleccionado "rechazar alumno". <br>
+                                                        Si esta es la acción que deseas realizar, por favor confirma tu elección,
+                                                        de lo contrario, selecciona cancelar.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light active"
+                                                                data-bs-dismiss="modal">Cancelar
+                                                        </button>
+                                                        <button type="button" class="btn btn-danger">Rechazar alumno
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FIN MODAL RECHAZAR ALUMNO -->
                                     </tr>
-                                    <%i++;}%>
+                                    <%
+                                            i++;
+                                        }
+                                    %>
                                     </tbody>
                                 </table>
                                 <!-- FIN LISTA DE NUEVAS SOLICITUDES -->
 
-                                <!-- BOTON GUARDAR CAMBIOS  -->
-                                <div class="text-center">
-                                    <div class="col">
-                                        <a class="btn btn-dark" data-bs-toggle="modal" href="#guardarNuevos" role="button">Guardar
-                                            cambios</a>
-                                    </div>
-                                </div>
-                                <!-- FIN BOTON GUARDAR CAMBIOS -->
                             </div>
                         </div>
                     </div>

@@ -151,7 +151,7 @@
             <div class="alert alert-danger" role="alert"><%=request.getParameter("err")%>
             </div>
             <% } %>
-            <!-- BUSCAR ACTIVIDAD IMPLEMENTAR EN EL SERVLET Y DAO -->
+            <!-- BUSCAR ALUMNO IMPLEMENTAR EN EL SERVLET Y DAO -->
             <form method="post" action="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=buscar">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Buscar por nombre" name="textoBuscar"
