@@ -4,7 +4,7 @@
 <%@ page import="com.example.proyecto.beans.Donacion" %>
 <%@ page import="java.util.ArrayList" %>
 <jsp:useBean id="lista2" scope="request" type="ArrayList<com.example.proyecto.beans.Donacion>" />
-
+<jsp:useBean id="textoBusqueda" scope="request" type="java.lang.String" class="java.lang.String"/>
 <html lang="en">
 
 <head>
@@ -27,19 +27,19 @@
     <div class="header">
         <!-- CABECERA DE LA BARRA LATERAL LISTOOOOO -->
         <div class="header-left">
-            <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo"> <img
+            <a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page" class="logo text-decoration-none"> <img
                     src="assets/img/IconoBat.png" width="30" height="50" alt="logo"> <span
                     class="logoclass">TELEWEEK</span> </a>
         </div>
         <!-- LAS RAYITAS Q ABREN A LA BARRA LISTOOO-->
-        <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
-        <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+        <a class="text-decoration-none" href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+        <a class="mobile_btn text-decoration-none" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
         <!-- NAVBAR -->
         <ul class="nav user-menu">
             <!-- FOTO DE PERFIL CON LAS OPCIONES DE EDITAR PERFIL Y DEMAS -->
             <li class="nav-item dropdown has-arrow">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
-                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50" alt="Soeng Souy"></span>
+                <a href="#" class="dropdown-toggle nav-link text-decoration-none" data-bs-toggle="dropdown"> <span class="user-img"><img
+                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50"></span>
                 </a>
                 <!-- MENU DESPLEGABLE DE LA FLECHITA DE LA FOTO DE PERFIL -->
                 <div class="dropdown-menu">
@@ -56,10 +56,10 @@
                             <p class="text-muted mb-0">Delegado General</p>
                         </div>
                     </div>
-                    <a class="dropdown-item" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
+                    <a class="dropdown-item text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=perfil">Mi
                         Perfil</a>
                     <!-- revisar ruta -->
-                    <a class="dropdown-item"
+                    <a class="dropdown-item text-decoration-none"
                        href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=cerrar_sesion">Cerrar
                         Sesión</a>
                 </div>
@@ -73,47 +73,47 @@
         <div class="sidebar-inner slimscroll">
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
-                    <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page"><i
+                    <li><a class="text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=main_page"><i
                             class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
                     </li>
                     <li class="list-divider"></li>
 
                     <li class="menu-title mt-3"><span>ACCIONES</span></li>
                     <!-- USUARIOS -->
-                    <li class="submenu"><a href="#"><i class="fas fa-user"></i> <span> Usuarios </span> <span
+                    <li class="submenu"><a class="text-decoration-none" href="#"><i class="fas fa-user"></i> <span> Usuarios </span> <span
                             class="menu-arrow"></span></a>
                         <ul class="submenu_class" style="display: none;">
-                            <li><a
+                            <li><a class="text-decoration-none"
                                    href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_registro">
                                 Solicitudes </a></li>
-                            <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_usuarios">
+                            <li><a class="text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_usuarios">
                                 Registrados </a></li>
                         </ul>
                     </li>
 
                     <!-- DONACIONES -->
-                    <li class="submenu"><a href="#"><i class="bi bi-heart-fill"></i> <span> Donaciones </span>
+                    <li class="submenu"><a class="text-decoration-none" href="#"><i class="bi bi-heart-fill"></i> <span> Donaciones </span>
                         <span class="menu-arrow"></span></a>
                         <ul class="submenu_class" style="display: none;">
                             <li>
-                                <a class="active" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Recepcionadas </a>
+                                <a class="active text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Por verificar</a>
                             </li>
-                            <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_donaciones">Verificadas</a>
+                            <li><a class="text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_donaciones">Verificadas</a>
                             </li>
                         </ul>
                     </li>
 
                     <!-- ACTIVIDADES -->
-                    <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=editar_actividades"><i
+                    <li><a class="text-decoration-none" href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=editar_actividades"><i
                             class="bi bi-calendar-fill"></i><span>Actividades</span></a>
                     </li>
 
                     <!-- CONTACTOS -->
                     <li class="list-divider"></li>
                     <li class="menu-title mt-3"><span>CONTACTOS</span></li>
-                    <li><a href="https://www.instagram.com/aitel.pucp/" target="_blank">
+                    <li><a class="text-decoration-none" href="https://www.instagram.com/aitel.pucp/" target="_blank">
                         <i class="bi bi-instagram"></i> <span>Instagram</span></a></li>
-                    <li><a href="mailto:aitel@pucp.pe" target="_blank"><i class="fas fa-envelope"></i>
+                    <li><a class="text-decoration-none" href="mailto:aitel@pucp.pe" target="_blank"><i class="fas fa-envelope"></i>
                         <span>Gmail</span></a></li>
 
                 </ul>
@@ -133,6 +133,28 @@
                     </div>
                 </div>
             </div>
+            <!-- MENSAJES DE ERROR O CONFIRMACION -->
+            <% if (request.getParameter("msg") != null) {%>
+            <div class="alert alert-success" role="alert"><%=request.getParameter("msg")%>
+            </div>
+            <% } %>
+            <% if (request.getParameter("err") != null) {%>
+            <div class="alert alert-danger" role="alert"><%=request.getParameter("err")%>
+            </div>
+            <% } %>
+            <!-- BUSCAR ACTIVIDAD IMPLEMENTAR EN EL SERVLET Y DAO -->
+            <form method="post" action="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=buscar">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Buscar por nombre" name="textoBuscar"
+                           value="<%=textoBusqueda%>"/>
+                    <button class="input-group-text" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <a class="input-group-text" href="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=validar_donaciones">
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </div>
+            </form>
             <!-- LISTA DE NUEVAS DONACIONES -->
             <div class="row">
                 <div class="col-sm-12">
@@ -140,18 +162,15 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <!-- TABLA DE NUEVAS DONACIONES -->
-                                <table class="table table-hover">
-                                    <thead class="table-light">
+                                <table class="table table-hover mt-1 mb-1">
+                                    <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Usuario</th>
                                         <th>Correo</th>
                                         <th>Fecha</th>
                                         <th>Medio de pago</th>
-                                        <!-- IMPLEMENTAR BOTONES OBS ACEPTAR RECHAZAR -->
                                         <th>Comprobante</th>
-                                        <th>Válido</th>
-                                        <th>No válido</th>
                                     </tr>
                                     </thead>
 
@@ -173,31 +192,127 @@
                                                 <i class="bi bi-eye"></i>
                                             </button>
                                         </td>
-                                        <!-- VALIDO -->
-                                        <td>
-                                            <button class="btn btn-primary" >
-                                                <i class="bi bi-person-check-fill"></i>
-                                            </button>
-                                        </td>
-                                        <!-- NO VALIDO-->
-                                        <td>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-person-x-fill"></i>
-                                            </button>
-                                        </td>
+                                        <!-- MODAL OBSERVAR COMPROBANTE-->
+                                        <div class="modal fade" id="modalMostrar" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <form>
+                                                        <div class="modal-header">
+                                                            <h5 class="fw-bold">Verifique la donación realizada</h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="mb-3 d-flex justify-content-center align-items-center flex-column">
+                                                                <img src="images/comprobante.png" alt="comprobante de pago"
+                                                                     class="img-thumbnail w-70">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <h6 class="fw-bold">Monto ingresado:</h6>
+                                                                <!-- IMPLEMENTAR EL DAO -->
+                                                                <p class="form-control">S/. 100
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <!-- BOTÓN PARA EL MODAL VALIDO -->
+                                                            <button type="button" class="btn btn-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#valido">
+                                                                Validar donación
+                                                            </button>
+                                                            <!-- BOTÓN PARA EL MODAL NO VALIDO-->
+                                                            <button type="button" class="btn btn-danger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#noValido">
+                                                                No validar donación
+                                                            </button>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FIN MODAL OBSERVAR COMPROBANTE-->
+                                        <!-- MODAL CONFIRMACION DE VALIDAR-->
+                                        <div class="modal fade" id="valido" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Donación validada
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-justify">
+                                                        Has seleccionado "validar donación". <br>
+                                                        Si esta es la acción que deseas realizar, por favor confirma tu elección,
+                                                        de lo contrario, selecciona cancelar.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light active"
+                                                                data-bs-dismiss="modal">Cancelar
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary">Validar donación
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FIN MODAL CONFIRMACION DE VALIDAR-->
+
+                                        <!-- MODAL CONFIRMACION DE NO VALIDAR-->
+                                        <div class="modal fade" id="noValido" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Donación no validada
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-justify">
+                                                        Has seleccionado "no validar donación". <br>
+                                                        Si esta es la acción que deseas realizar, por favor confirma tu elección,
+                                                        de lo contrario, selecciona cancelar.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light active"
+                                                                data-bs-dismiss="modal">Cancelar
+                                                        </button>
+                                                        <button type="button" class="btn btn-danger">No validar donación
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FIN MODAL CONFIRMACION DE NO VALIDAR-->
                                     </tr>
                                     </tbody>
                                 </table>
-                                <!-- FIN LISTA DE NUEVAS SOLICITUDES -->
+                                <!-- FIN LISTA DE NUEVAS DONACIONES -->
 
-                                <!-- BOTON GUARDAR CAMBIOS  -->
-                                <div class="text-center">
-                                    <div class="col">
-                                        <a class="btn btn-dark" data-bs-toggle="modal" href="#guardarNuevos" role="button">Guardar
-                                            cambios</a>
-                                    </div>
-                                </div>
-                                <!-- FIN BOTON GUARDAR CAMBIOS -->
+                                <!-- PAGINACION -->
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>

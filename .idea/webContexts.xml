@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/delegGen/EditarActividades.jsp" value="file://$PROJECT_DIR$/src/main/webapp/delegGen" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/delegGen/ListaUsuarios.jsp" value="file://$PROJECT_DIR$/src/main/webapp/delegGen" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/delegGen/ValidarDonaciones.jsp" value="file://$PROJECT_DIR$/src/main/webapp/delegGen" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/delegGen/ValidarRegistro.jsp" value="file://$PROJECT_DIR$/src/main/webapp/delegGen" />
       </map>
     </option>

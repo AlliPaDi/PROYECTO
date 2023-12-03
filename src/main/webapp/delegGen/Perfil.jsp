@@ -81,7 +81,7 @@
                     <li class="submenu"><a href="#"><i class="bi bi-heart-fill"></i> <span> Donaciones </span> <span
                             class="menu-arrow"></span></a>
                         <ul class="submenu_class" style="display: none;">
-                            <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Recepcionadas </a></li>
+                            <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Por verificar</a></li>
                             <li><a href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_donaciones">Verificadas</a></li>
                         </ul>
                     </li>

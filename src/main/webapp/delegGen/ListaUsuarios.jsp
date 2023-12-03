@@ -39,7 +39,7 @@
         <ul class="nav user-menu">
             <!-- FOTO DE PERFIL CON LAS OPCIONES DE EDITAR PERFIL Y DEMAS -->
             <li class="nav-item dropdown has-arrow">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
+                <a href="#" class="dropdown-toggle nav-link text-decoration-none" data-bs-toggle="dropdown"> <span class="user-img"><img
                         class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50"></span>
                 </a>
                 <!-- MENU DESPLEGABLE DE LA FLECHITA DE LA FOTO DE PERFIL -->
@@ -102,7 +102,7 @@
                         <ul class="submenu_class" style="display: none;">
                             <li>
                                 <a class="text-decoration-none"
-                                   href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Recepcionadas </a>
+                                   href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=validar_donaciones">Por verificar </a>
                             </li>
                             <li><a class="text-decoration-none"
                                    href="<%=request.getContextPath() %>/DelegadoGeneralServlet?action=lista_donaciones">Verificadas</a>
@@ -271,7 +271,7 @@
                                         <!-- BANEAR -->
                                         <td>
                                             <button class="btn btn-danger" data-bs-toggle="modal"
-                                                    href="#eliminarAlumno">
+                                                    data-bs-target="#eliminarAlumno">
                                                 <i class="bi bi-person-x-fill"></i>
                                             </button>
                                         </td>

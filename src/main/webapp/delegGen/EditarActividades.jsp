@@ -261,14 +261,14 @@
                                         <!-- MODAL EDITAR ACT -->
                                         <div class="modal fade" id="modalEditar<%=i%>"
                                              aria-hidden="true">
-                                            <div class="modal-dialog">
+                                            <div class="modal-dialog modal-dialog-centered">
                                                 <div class="modal-content">
                                                     <form method="post"
                                                           action="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=editar"
                                                           enctype="multipart/form-data">
 
                                                         <div class="modal-header">
-                                                            <h5 class="fw-bold"><%=delegadoActividad.getActividad().getTitulo()%>
+                                                            <h5 class="modal-title fw-bold"><%=delegadoActividad.getActividad().getTitulo()%>
                                                             </h5>
                                                             <button type="button" class="btn-close"
                                                                     data-bs-dismiss="modal"
@@ -431,18 +431,18 @@
                                                     <div class="mb-3">
                                                         <label for="tituloActividad">Ingrese el nombre de la actividad:</label>
                                                         <input type="text" class="form-control form-control-sm"
-                                                               name="tituloActividad">
+                                                               name="tituloActividad" required>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="descripcionActividad">Ingrese una descripción:</label>
                                                         <textarea class="form-control"
                                                                   rows="4" name="descripcionActividad"
-                                                                  placeholder="Ingrese la descripción aquí"></textarea>
+                                                                  placeholder="Ingrese la descripción aquí" required></textarea>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="idAlumnoDelegadoActividad">Seleccione un delegado de
                                                             Actividad:</label>
-                                                        <select name="idAlumnoDelegadoActividad" class="form-select">
+                                                        <select name="idAlumnoDelegadoActividad" class="form-select" required>
                                                             <%if (listaAlumnosCandidatos.isEmpty()) {%>
                                                             <option value="0">-- Sin Posibles Candidatos --</option>
                                                             <%} else {%>
