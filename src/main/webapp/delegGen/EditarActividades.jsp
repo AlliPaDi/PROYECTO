@@ -48,7 +48,7 @@
             <li class="nav-item dropdown has-arrow">
                 <a href="#" class="dropdown-toggle nav-link text-decoration-none" data-bs-toggle="dropdown"> <span
                         class="user-img"><img
-                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50" alt="Soeng Souy"></span>
+                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50"></span>
                 </a>
                 <!-- MENU DESPLEGABLE DE LA FLECHITA DE LA FOTO DE PERFIL -->
                 <div class="dropdown-menu">

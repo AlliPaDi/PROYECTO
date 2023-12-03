@@ -40,7 +40,7 @@
             <!-- FOTO DE PERFIL CON LAS OPCIONES DE EDITAR PERFIL Y DEMAS -->
             <li class="nav-item dropdown has-arrow">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
-                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50" alt="Soeng Souy"></span>
+                        class="rounded-circle" src="assets/img/profiles/usuario.jpg" width="50"></span>
                 </a>
                 <!-- MENU DESPLEGABLE DE LA FLECHITA DE LA FOTO DE PERFIL -->
                 <div class="dropdown-menu">
@@ -143,7 +143,7 @@
                     <button class="input-group-text" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
-                    <a class="input-group-text" href="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=editar_actividades">
+                    <a class="input-group-text" href="<%=request.getContextPath()%>/DelegadoGeneralServlet?action=lista_donaciones">
                         <i class="bi bi-x-circle"></i>
                     </a>
                 </div>
